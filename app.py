@@ -25,7 +25,7 @@ def get_mysql_password():
 
 def get_db_connection():
     connection = mysql.connector.connect(
-        host=os.getenv('MYSQL_HOST', 'db'),
+        host=os.getenv('MYSQL_HOST', 'vldb'),
         user=os.getenv('MYSQL_USER', 'root'),
         password=get_mysql_password(),
         database=os.getenv('MYSQL_DATABASE', 'testdb')
